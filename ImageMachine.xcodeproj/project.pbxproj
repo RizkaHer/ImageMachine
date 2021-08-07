@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0C5D74C26BD6D9000000271 /* MachineDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D74A26BD6D8F00000271 /* MachineDataTableViewCell.swift */; };
+		F0C5D74D26BD6D9000000271 /* MachineDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C5D74B26BD6D8F00000271 /* MachineDataTableViewCell.xib */; };
+		F0C5D75A26BD7FA200000271 /* MachineData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D75826BD7FA200000271 /* MachineData+CoreDataClass.swift */; };
+		F0C5D75B26BD7FA200000271 /* MachineData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D75926BD7FA200000271 /* MachineData+CoreDataProperties.swift */; };
+		F0C5D76226BD81D200000271 /* ImageMachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76026BD81D200000271 /* ImageMachineDetailViewController.swift */; };
+		F0C5D76526BD826C00000271 /* ImageMachineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */; };
+		F0C5D76726BD828900000271 /* ImageMachineDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */; };
+		F0C5D76D26BDC59200000271 /* ImageMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76C26BDC59200000271 /* ImageMachine.swift */; };
 		F0E22E5926BAF3E900D93C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5826BAF3E900D93C9B /* AppDelegate.swift */; };
 		F0E22E5B26BAF3E900D93C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5A26BAF3E900D93C9B /* SceneDelegate.swift */; };
-		F0E22E5D26BAF3E900D93C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5C26BAF3E900D93C9B /* ViewController.swift */; };
+		F0E22E5D26BAF3E900D93C9B /* MachineDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5C26BAF3E900D93C9B /* MachineDataViewController.swift */; };
 		F0E22E6026BAF3E900D93C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E22E5E26BAF3E900D93C9B /* Main.storyboard */; };
 		F0E22E6326BAF3E900D93C9B /* ImageMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E6126BAF3E900D93C9B /* ImageMachine.xcdatamodeld */; };
 		F0E22E6526BAF3EB00D93C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E22E6426BAF3EB00D93C9B /* Assets.xcassets */; };
@@ -17,10 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F0C5D74A26BD6D8F00000271 /* MachineDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataTableViewCell.swift; sourceTree = "<group>"; };
+		F0C5D74B26BD6D8F00000271 /* MachineDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineDataTableViewCell.xib; sourceTree = "<group>"; };
+		F0C5D75826BD7FA200000271 /* MachineData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MachineData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F0C5D75926BD7FA200000271 /* MachineData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MachineData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F0C5D76026BD81D200000271 /* ImageMachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachineDetailViewController.swift; sourceTree = "<group>"; };
+		F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachineDetailView.swift; sourceTree = "<group>"; };
+		F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageMachineDetailView.xib; sourceTree = "<group>"; };
+		F0C5D76C26BDC59200000271 /* ImageMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachine.swift; sourceTree = "<group>"; };
 		F0E22E5526BAF3E900D93C9B /* ImageMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E22E5826BAF3E900D93C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E22E5A26BAF3E900D93C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0E22E5C26BAF3E900D93C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0E22E5C26BAF3E900D93C9B /* MachineDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDataViewController.swift; sourceTree = "<group>"; };
 		F0E22E5F26BAF3E900D93C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0E22E6226BAF3E900D93C9B /* ImageMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageMachine.xcdatamodel; sourceTree = "<group>"; };
 		F0E22E6426BAF3EB00D93C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,12 +76,20 @@
 			children = (
 				F0E22E5826BAF3E900D93C9B /* AppDelegate.swift */,
 				F0E22E5A26BAF3E900D93C9B /* SceneDelegate.swift */,
-				F0E22E5C26BAF3E900D93C9B /* ViewController.swift */,
-				F0E22E5E26BAF3E900D93C9B /* Main.storyboard */,
 				F0E22E6426BAF3EB00D93C9B /* Assets.xcassets */,
 				F0E22E6626BAF3EB00D93C9B /* LaunchScreen.storyboard */,
 				F0E22E6926BAF3EB00D93C9B /* Info.plist */,
 				F0E22E6126BAF3E900D93C9B /* ImageMachine.xcdatamodeld */,
+				F0E22E5C26BAF3E900D93C9B /* MachineDataViewController.swift */,
+				F0E22E5E26BAF3E900D93C9B /* Main.storyboard */,
+				F0C5D74A26BD6D8F00000271 /* MachineDataTableViewCell.swift */,
+				F0C5D74B26BD6D8F00000271 /* MachineDataTableViewCell.xib */,
+				F0C5D75826BD7FA200000271 /* MachineData+CoreDataClass.swift */,
+				F0C5D75926BD7FA200000271 /* MachineData+CoreDataProperties.swift */,
+				F0C5D76026BD81D200000271 /* ImageMachineDetailViewController.swift */,
+				F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */,
+				F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */,
+				F0C5D76C26BDC59200000271 /* ImageMachine.swift */,
 			);
 			path = ImageMachine;
 			sourceTree = "<group>";
@@ -128,8 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E22E6826BAF3EB00D93C9B /* LaunchScreen.storyboard in Resources */,
+				F0C5D76726BD828900000271 /* ImageMachineDetailView.xib in Resources */,
 				F0E22E6526BAF3EB00D93C9B /* Assets.xcassets in Resources */,
 				F0E22E6026BAF3E900D93C9B /* Main.storyboard in Resources */,
+				F0C5D74D26BD6D9000000271 /* MachineDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E22E5D26BAF3E900D93C9B /* ViewController.swift in Sources */,
+				F0C5D75B26BD7FA200000271 /* MachineData+CoreDataProperties.swift in Sources */,
+				F0E22E5D26BAF3E900D93C9B /* MachineDataViewController.swift in Sources */,
 				F0E22E6326BAF3E900D93C9B /* ImageMachine.xcdatamodeld in Sources */,
+				F0C5D76526BD826C00000271 /* ImageMachineDetailView.swift in Sources */,
+				F0C5D76226BD81D200000271 /* ImageMachineDetailViewController.swift in Sources */,
+				F0C5D74C26BD6D9000000271 /* MachineDataTableViewCell.swift in Sources */,
+				F0C5D75A26BD7FA200000271 /* MachineData+CoreDataClass.swift in Sources */,
+				F0C5D76D26BDC59200000271 /* ImageMachine.swift in Sources */,
 				F0E22E5926BAF3E900D93C9B /* AppDelegate.swift in Sources */,
 				F0E22E5B26BAF3E900D93C9B /* SceneDelegate.swift in Sources */,
 			);
@@ -220,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
