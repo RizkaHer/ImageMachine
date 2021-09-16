@@ -130,6 +130,7 @@
                             <state key="normal" title="Add Image" image="photo" catalog="system">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <state key="selected" image="photo.fill" catalog="system"/>
                             <connections>
                                 <action selector="addImage:" destination="-1" eventType="touchUpInside" id="aRr-cO-18a"/>
                             </connections>
@@ -192,6 +193,7 @@
     </objects>
     <resources>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

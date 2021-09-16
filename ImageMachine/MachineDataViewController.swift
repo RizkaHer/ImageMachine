@@ -28,13 +28,15 @@ class MachineDataViewController: UIViewController {
     
     let refreshControl = UIRefreshControl()
     var machineData : [MachineData]?
-    var showedData : [MachineData]?
     var isDefaultSort : Bool = true
+    var imageMachineDataModel : ImageMachineDataModel?
+    var showedData : [ImageMachineModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        imageMachineDataModel = ImageMachineDataModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,11 +89,11 @@ class MachineDataViewController: UIViewController {
     }
     
     private func getShowedData() {
-        showedData = [MachineData]()
+        showedData = [ImageMachineModel]()
         if isDefaultSort {
-            showedData = machineData!.sorted { $0.machineName! < $1.machineName!}
+            showedData = showedData!.sorted { $0.machineName! < $1.machineName!}
         } else {
-            showedData = machineData!.sorted { $0.machineType! < $1.machineType!}
+            showedData = showedData!.sorted { $0.machineType! < $1.machineType!}
         }
     }
 }
@@ -99,33 +101,11 @@ class MachineDataViewController: UIViewController {
 extension MachineDataViewController: MachineDataProtocols {
     
     func fetchMachineData() {
-        guard let appDelegate =
-          UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        do {
-            machineData = try managedContext.fetch(getSortedRequest())
-            updateView()
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            updateView()
-        }
-    }
-    
-    private func getSortedRequest() -> NSFetchRequest<MachineData> {
-        let request = MachineData.fetchRequest() as NSFetchRequest<MachineData>
-        
         var key = "machineName"
         if !isDefaultSort {
             key = "machineType"
         }
-            
-        let sort = NSSortDescriptor(key: key, ascending: true)
-        request.sortDescriptors = [sort]
-        return request
+        showedData = imageMachineDataModel?.selectData(sortBy: key)
     }
     
     func deleteMachineData(deletedData: [MachineData]) {
@@ -134,7 +114,7 @@ extension MachineDataViewController: MachineDataProtocols {
     
     func updateView() {
         isHiddenSortOptionView(isHiding: true)
-        if machineData != nil && machineData!.count > 0 {
+        if showedData != nil && showedData!.count > 0 {
             tableView.isHidden = false
             machineDataNotFound.isHidden = true
             isHiddenSortMenu(isHiding: false)
@@ -170,8 +150,18 @@ extension MachineDataViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "machineDataCell", for: indexPath) as! MachineDataTableViewCell
-        let currentData = showedData![indexPath.row]
-        cell.updateCell(machineData: currentData)
+        if let currentMachineData = showedData {
+            let currentData = currentMachineData[indexPath.row]
+            cell.updateCell(machineData: currentData)
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedData = showedData?[indexPath.row]
+        let destinationVC = ImageMachineDetailViewController()
+        destinationVC.imageMachineDetailModel = selectedData
+        destinationVC.performSegue(withIdentifier: "showImageMachineDetail", sender: self)
     }
 }

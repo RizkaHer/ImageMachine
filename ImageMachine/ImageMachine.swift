@@ -8,18 +8,26 @@
 import Foundation
 import UIKit
 
-struct ImageMachineModel {
+class ImageMachineModel : NSObject {
     private var createdDate : Date {
         return Date()
     }
+    private var dataId : String = ""
     var machineId : String {
-        mutating get{
-            return generateID()
+        get{
+            return dataId
+        }
+        set {
+            dataId = newValue
         }
     }
+    private var dataQR : String = ""
     var machineQRCode : String {
-        mutating get {
-            return generateQRCode()
+        get {
+            return dataQR
+        }
+        set {
+            dataQR = newValue
         }
     }
     var machineName : String?
@@ -30,7 +38,11 @@ struct ImageMachineModel {
 }
 
 extension ImageMachineModel {
-    private mutating func generateID()-> String {
+    func initNewImageMachine() {
+        dataId = generateID()
+        dataQR = generateQRCode()
+    }
+    private func generateID()-> String {
         let unixtime = createdDate.timeIntervalSince1970
         let unixString = String(unixtime).prefix(10)
         var randNoString = ""
@@ -41,7 +53,7 @@ extension ImageMachineModel {
         return unixString+randNoString
     }
     
-    private mutating func generateQRCode()-> String {
+    private func generateQRCode()-> String {
         let createdDateString = getCreatedStringDate(currentDate: createdDate)
         return "01\(machineId)02\(createdDateString)"
     }
@@ -51,6 +63,5 @@ extension ImageMachineModel {
         formatter.dateFormat = "ddMMyyyy"
         return formatter.string(from: currentDate)
     }
-
 }
 

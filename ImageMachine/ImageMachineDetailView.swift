@@ -54,11 +54,14 @@ class ImageMachineDetailView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleHeight]
-        if  imageMachineDetails == nil {
-            imageMachineDetails = ImageMachineModel()
-        }
+    }
+    
+    func initImageMachineModel() -> ImageMachineModel {
+        imageMachineDetails = ImageMachineModel()
+        imageMachineDetails.initNewImageMachine()
         machineId.text = imageMachineDetails.machineId
         machineQRCode.text = imageMachineDetails.machineQRCode
+        return imageMachineDetails
     }
     
     func isEnableEditing(enableEditing: Bool) {
@@ -86,14 +89,19 @@ class ImageMachineDetailView: UIView {
             if maintenanceDate != nil {
                 imageMachineDetails.machineLastMaintenanceDate = maintenanceDate
             }
-            
             if machineImages != nil {
                 imageMachineDetails.machineImages = machineImages
             }
-            imageMachineDetails.machineName = machineName.text!
-            imageMachineDetails.machineType = machineType.text!
-            imageMachineDetails.machineLastMaintenanceDate = maintenanceDate
-            imageMachineDetails.machineImages = machineImages
+            if let name = machineName.text {
+                imageMachineDetails.machineName = name
+            }
+            
+            if let type = machineType.text {
+                imageMachineDetails.machineType = type
+            }
+            let machineDataModel = ImageMachineDataModel.init()
+            machineDataModel.insertNewData(newData: imageMachineDetails)
+            
             return true
         } else {
             showAlert(message: validateResult.1!)
@@ -117,10 +125,13 @@ class ImageMachineDetailView: UIView {
             if machineImages != nil {
                 imageMachineDetails.machineImages = machineImages
             }
-            imageMachineDetails.machineName = machineName.text!
-            imageMachineDetails.machineType = machineType.text!
-            imageMachineDetails.machineLastMaintenanceDate = maintenanceDate
-            imageMachineDetails.machineImages = machineImages
+            if let name = machineName.text {
+                imageMachineDetails.machineName = name
+            }
+            
+            if let type = machineType.text {
+                imageMachineDetails.machineType = type
+            }
             return true
         } else {
             showAlert(message: validateResult.1!)

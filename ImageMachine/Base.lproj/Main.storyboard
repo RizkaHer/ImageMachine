@@ -21,15 +21,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="machineDataCell" id="yrt-BH-hYe" customClass="MachineDataTableViewCell" customModule="ImageMachine" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="machineDataCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="machineDataCell" id="yrt-BH-hYe" customClass="MachineDataTableViewCell" customModule="ImageMachine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yrt-BH-hYe" id="DMb-8h-xQh">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yrt-BH-hYe" id="DMb-8h-xQh" customClass="MachineDataTableViewCell" customModule="ImageMachine" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="he7-Da-QwK" kind="showDetail" id="1DI-iX-Q4j"/>
+                                            <segue destination="he7-Da-QwK" kind="showDetail" identifier="showImageMachineDetail" id="1DI-iX-Q4j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -178,15 +178,15 @@
             <objects>
                 <viewController id="he7-Da-QwK" customClass="ImageMachineDetailViewController" customModule="ImageMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8c-j2-URY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" restorationIdentifier="ImageMachineDetailView" translatesAutoresizingMaskIntoConstraints="NO" id="P1z-I7-TZF" customClass="ImageMachineDetailView" customModule="ImageMachine" customModuleProvider="target">
-                                <rect key="frame" x="10" y="88" width="394" height="724"/>
+                                <rect key="frame" x="10" y="0.0" width="394" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D56-oS-n3T">
-                                <rect key="frame" x="50" y="832" width="314" height="30"/>
+                                <rect key="frame" x="50" y="778" width="314" height="30"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hgS-cg-Wwj"/>
@@ -251,7 +251,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CnG-db-VFm"/>
+        <segue reference="1DI-iX-Q4j"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up" catalog="system" width="120" height="128"/>

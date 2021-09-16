@@ -15,6 +15,7 @@
 		F0C5D76526BD826C00000271 /* ImageMachineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */; };
 		F0C5D76726BD828900000271 /* ImageMachineDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */; };
 		F0C5D76D26BDC59200000271 /* ImageMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76C26BDC59200000271 /* ImageMachine.swift */; };
+		F0C5D76F26BE730700000271 /* ImageMachineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5D76E26BE730700000271 /* ImageMachineDataModel.swift */; };
 		F0E22E5926BAF3E900D93C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5826BAF3E900D93C9B /* AppDelegate.swift */; };
 		F0E22E5B26BAF3E900D93C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5A26BAF3E900D93C9B /* SceneDelegate.swift */; };
 		F0E22E5D26BAF3E900D93C9B /* MachineDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E22E5C26BAF3E900D93C9B /* MachineDataViewController.swift */; };
@@ -33,6 +34,7 @@
 		F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachineDetailView.swift; sourceTree = "<group>"; };
 		F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageMachineDetailView.xib; sourceTree = "<group>"; };
 		F0C5D76C26BDC59200000271 /* ImageMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachine.swift; sourceTree = "<group>"; };
+		F0C5D76E26BE730700000271 /* ImageMachineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMachineDataModel.swift; sourceTree = "<group>"; };
 		F0E22E5526BAF3E900D93C9B /* ImageMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E22E5826BAF3E900D93C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E22E5A26BAF3E900D93C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				F0C5D76426BD826C00000271 /* ImageMachineDetailView.swift */,
 				F0C5D76626BD828900000271 /* ImageMachineDetailView.xib */,
 				F0C5D76C26BDC59200000271 /* ImageMachine.swift */,
+				F0C5D76E26BE730700000271 /* ImageMachineDataModel.swift */,
 			);
 			path = ImageMachine;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				F0C5D76D26BDC59200000271 /* ImageMachine.swift in Sources */,
 				F0E22E5926BAF3E900D93C9B /* AppDelegate.swift in Sources */,
 				F0E22E5B26BAF3E900D93C9B /* SceneDelegate.swift in Sources */,
+				F0C5D76F26BE730700000271 /* ImageMachineDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

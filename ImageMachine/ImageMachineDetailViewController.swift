@@ -26,7 +26,7 @@ class ImageMachineDetailViewController: UIViewController {
     }
     
     func initBarButton() {
-        if imageMachineDetailModel == nil {
+        if imageMachineDetailModel.machineName == nil {
             hideSaveEditButton(editable: false)
             imageMachineDetailView.isEnableEditing(enableEditing: true)
         } else {
@@ -38,7 +38,12 @@ class ImageMachineDetailViewController: UIViewController {
     func initImageMachineDetail() {
         imageMachineDetailView.delegate = self
         imageMachineDetailView.presentationController = self
-        imageMachineDetailView.imageMachineDetails = imageMachineDetailModel
+        if imageMachineDetailModel == nil {
+            imageMachineDetailModel = imageMachineDetailView.initImageMachineModel()
+        } else {
+            imageMachineDetailView.imageMachineDetails = imageMachineDetailModel
+        }
+        
     }
     
     func hideSaveEditButton(editable:Bool) {
@@ -58,7 +63,7 @@ class ImageMachineDetailViewController: UIViewController {
     
     @IBAction func savingData(_ sender: Any) {
         hideSaveEditButton(editable: true)
-        if imageMachineDetailModel == nil {
+        if imageMachineDetailModel.machineName == nil {
             addingData()
         } else {
             updatingData()
@@ -71,6 +76,7 @@ extension ImageMachineDetailViewController : ImageMachineDetailActionDelegates {
         if imageMachineDetailView.updateImageMachine() {
             imageMachineDetailModel = imageMachineDetailView.imageMachineDetails
             imageMachineDetailView.isEnableEditing(enableEditing: false)
+            self.navigationController?.popToRootViewController(animated: true)
         } else {
             saveButton.isHidden = false
         }
@@ -80,6 +86,7 @@ extension ImageMachineDetailViewController : ImageMachineDetailActionDelegates {
         if imageMachineDetailView.addImageMachine() {
             imageMachineDetailModel = imageMachineDetailView.imageMachineDetails
             imageMachineDetailView.isEnableEditing(enableEditing: false)
+            self.navigationController?.popToRootViewController(animated: true)
         } else {
             saveButton.isHidden = false
         }

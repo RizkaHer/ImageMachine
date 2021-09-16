@@ -10,6 +10,7 @@ import UIKit
 class MachineDataTableViewCell: UITableViewCell {
     @IBOutlet weak var machineName: UILabel!
     @IBOutlet weak var machineType: UILabel!
+    @IBOutlet weak var content: UIView!
     
     static let reusabelIdentifier = "machineDataCell"
     
@@ -21,11 +22,10 @@ class MachineDataTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
-    func updateCell(machineData: MachineData) {
+    func updateCell(machineData: ImageMachineModel) {
         machineName.text = machineData.machineName
         machineType.text = machineData.machineType
     }
